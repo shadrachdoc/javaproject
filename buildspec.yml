@@ -5,10 +5,7 @@ phases:
     commands:
       - echo Entered the build phase...
       - mvn clean package
-      - mvn clean verify sonar:sonar \
-         -Dsonar.projectKey=tes \
-         -Dsonar.host.url=https://sonarqubeappservice85f.azurewebsites.net \
-         -Dsonar.login=sqp_d2474a274f70e5b948028bf5dcb19104d926942c
+      - mvn clean verify sonar:sonar -Dsonar.projectKey=tes -Dsonar.host.url=https://sonarqubeappservice85f.azurewebsites.net -Dsonar.login=sqp_d2474a274f70e5b948028bf5dcb19104d926942c
   post_build:
     commands:
       - echo Build completed successfully
